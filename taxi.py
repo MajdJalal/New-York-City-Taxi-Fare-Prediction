@@ -15,23 +15,23 @@ from sklearn.ensemble import RandomForestRegressor
 
 #train = pd.read_csv("C:\\Users\\PC\\Desktop\\Home\\ml\\env\\taxi_fare\\train.csv", chunksize = 100000)
 
-train_iterator = pd.read_csv("C:\\Users\\PC\\Desktop\\Home\\ml\\env\\taxi_fare\\train.csv", chunksize = 1000000)
+train = pd.read_csv("C:\\Users\\PC\\Desktop\\Home\\ml\\env\\taxi_fare\\train.csv")
 
-test_iterator = pd.read_csv("C:\\Users\\PC\\Desktop\\Home\\ml\\env\\taxi_fare\\test.csv", chunksize = 1000000)
+test= pd.read_csv("C:\\Users\\PC\\Desktop\\Home\\ml\\env\\taxi_fare\\test.csv")
 #print(train_iterator[0].info)
 
-for train in train_iterator:
-    train = train
-    train_set  = train.drop("fare_amount", axis = 1)
-    train_labels = train["fare_amount"]
-    #print(train.info())
-    break
 
-for test in test_iterator:
-    test = test
-    break
+train = train
+    
+train_set  = train.drop("fare_amount", axis = 1)
+train_labels = train["fare_amount"]
+    #print(train.info())
+
+
+test = test
+
 #print(train_set.info())
-##preproccessing pipeline
+#preproccessing pipeline
 #1)dropping all invalid data dor lonitude and latitude 
 #class for doing that 
 class coords (BaseEstimator, TransformerMixin) :
