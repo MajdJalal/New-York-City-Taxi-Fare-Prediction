@@ -15,3 +15,7 @@ i wrote 4 classes to do that
 
 2)then i tried three regression models and found out the best to be forest regression
 3)saving the predicted test_set in a csv file
+
+
+**NOTE: i couldnt upload the train_set as it is considered to be big in GITHUB, u can reference it from kaggle itself;
+it is worth noting that i just trained my model on the first 1M instances of the dataset, and that gave me good results.
